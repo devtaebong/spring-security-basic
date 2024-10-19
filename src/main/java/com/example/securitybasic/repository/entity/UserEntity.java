@@ -27,7 +27,7 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     private EncryptionAlgorithm algorithm;
 
-    @OneToMany(mappedBy = "authorities")
+    @OneToMany(mappedBy = "userEntity")
     private List<AuthorityEntity> authorities;
 
     public UserEntity(String username, String password, EncryptionAlgorithm algorithm) {
